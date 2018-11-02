@@ -2,7 +2,11 @@ def reformat_languages(languages)
   reformatted={}
   languages.each do |style, stylevalues|
     stylevalues.each do |language, languagedata|
-      reformatted[language]={type:languagedata[:type],style:[style]}
+      if reformatted.keys.include?(language)
+        reformatted[lanuage][:style].push(style)
+      else
+        reformatted[language]={type:languagedata[:type],style:[style]}
+      end
     end
   end
   return reformatted
