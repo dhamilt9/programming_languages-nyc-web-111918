@@ -5,4 +5,5 @@ def reformat_languages(languages)
       reformatted[language]={type:languagedata[:type],style:style}
     end
   end
+  return reformatted
 end
